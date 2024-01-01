@@ -5,10 +5,8 @@ from airflow.providers.postgres.hooks.postgres import PostgresHook
 
 from cricket_data_etl import extract, load, transform
 
-def create_connection() -> None:
-    """ create a database connection to the SQLite database
-        specified by db_file
-    :param db_file: database file
+def create_connection():
+    """ create a database connection to Postgres DB
     :return: Connection object or None
     """
     conn = None
